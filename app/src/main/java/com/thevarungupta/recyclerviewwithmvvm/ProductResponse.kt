@@ -1,5 +1,7 @@
 package com.thevarungupta.recyclerviewwithmvvm
 
+import java.io.Serializable
+
 data class ProductResponse(
     val count: Int,
     val data: List<Product>,
@@ -21,4 +23,8 @@ data class Product(
     val status: Boolean,
     val subId: Int,
     val unit: String
-)
+): Serializable{
+    companion object{
+        const val KEY = "data"
+    }
+}

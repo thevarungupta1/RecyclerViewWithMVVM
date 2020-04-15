@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.products.observe(this, Observer {products ->
             recycler_view.layoutManager = LinearLayoutManager(this)
-            recycler_view.adapter = AdapterProduct(products)
+            recycler_view.adapter = AdapterProduct(this, products)
 //            recycler_view.also {
 //                it.layoutManager = LinearLayoutManager(applicationContext)
 //                it.adapter = AdapterProduct(products)
